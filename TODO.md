@@ -1,20 +1,26 @@
-# CRUD Spring Boot Project - Task List
+# Spring Boot CRUD with MySQL
 
-## ✅ Step 1: Fix `pom.xml` - Add correct dependencies
-- Replace `spring-boot-starter-webmvc` → `spring-boot-starter-web`
-- Add `spring-boot-starter-data-jpa`
-- Add `mysql-connector-j` (MySQL driver)
-- Fix test dependency
+## Project Overview
+Basic Spring Boot REST API performing CRUD (Create, Read, Update, Delete) operations on a `User` entity using MySQL database.
 
-## ✅ Step 2: Configure `application.properties` - MySQL + JPA
+## CRUD Endpoints (Base URL: `/api/users`)
 
-## ⬜ Step 3: Create `User.java` - JPA Entity
+| Method | Endpoint       | Description          |
+|--------|---------------|----------------------|
+| POST   | `/api/users`  | Create a new user    |
+| GET    | `/api/users`  | Get all users        |
+| GET    | `/api/users/{id}` | Get user by ID   |
+| PUT    | `/api/users/{id}` | Update user by ID |
+| DELETE | `/api/users/{id}` | Delete user by ID |
 
-## ⬜ Step 4: Create `UserRepository.java` - JPA Repository
+## Tech Stack
+- **Backend:** Spring Boot 4.1.0, Spring Data JPA
+- **Database:** MySQL (schema: `demo_db`)
+- **Build Tool:** Maven
+- **Java Version:** 21
 
-## ⬜ Step 5: Create `UserService.java` - Service Layer
-
-## ⬜ Step 6: Create `UserController.java` - REST Controller
-
-## ⬜ Step 7: Verify with `mvn compile`
+## To Run
+1. Ensure MySQL is running with database `demo_db` created.
+2. Update `application.properties` with your MySQL credentials.
+3. Run: `./mvnw spring-boot:run`
 
